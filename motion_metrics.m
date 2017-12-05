@@ -76,6 +76,8 @@ else
     if any(any(isnan(Yr))) || any(isnan(mYr));
         cY = corr(Yr,mYr,'rows','p');
     else
+        fprintf('Yr: %s\n', mat2str(size(Yr)));
+        fprintf('mYr:  %s\n', mat2str(size(mYr)));
         cY = corr(Yr,mYr);
     end
 end    
